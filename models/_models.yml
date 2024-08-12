@@ -1,0 +1,119 @@
+version: 2
+
+models:
+  - name: coverage
+    description:
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: coverage_extension
+    description:
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit
+    description:  FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit_benefitbalance_0_financial
+    description:  FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit_careteam
+    description:  FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit_diagnosis
+    description:  FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit_extension
+    description:  FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit_item_0_adjudication
+    description:  FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit_item_0_extension
+    description:  FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit_procedure
+    description: FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: explanationofbenefit_supportinginfo
+    description: FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: patient
+    description: FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table
+
+  - name: patient_identifier
+    description: FHIR inferno output table name
+    config:
+      schema: |
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
+        {% else %}input_layer{%- endif -%}
+      tags: bcda
+      materialized: table

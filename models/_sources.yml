@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: source_input
+    database: "{{ var('input_database') }}"
+    schema: "{{ var('input_schema') }}"
+    config:
+      enabled: |
+        {% if var('use_synthetic_data') == true -%} {{ false|as_bool }} {%- else -%} {{ true|as_bool }} {%- endif -%}
+    tables:
+      - name: coverage
+      - name: coverage_extension
+      - name: explanationofbenefit
+      - name: explanationofbenefit_benefitbalance_0_financial
+      - name: explanationofbenefit_careteam
+      - name: explanationofbenefit_diagnosis
+      - name: explanationofbenefit_extension
+      - name: explanationofbenefit_item_0_adjudication
+      - name: explanationofbenefit_item_0_extension
+      - name: explanationofbenefit_procedure
+      - name: explanationofbenefit_supportinginfo
+      - name: patient
+      - name: patient_identifier
