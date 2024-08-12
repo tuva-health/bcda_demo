@@ -1,10 +1,21 @@
-
 name: 'bcda_demo'
 version: '1.0.0'
 
 
 profile: 'default'
 
+
+vars:
+
+  use_synthetic_data: true
+
+  input_database: cms_bcda_sample
+  input_schema: raw_data
+
+  bcda_patient_file_prefix: fhir_input\\patient_
+  bcda_coverage_file_prefix: fhir_input\\coverage_
+
+  claims_enabled: true
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]

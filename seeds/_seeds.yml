@@ -1,0 +1,67 @@
+version: 2
+
+seeds:
+  - name: coverage
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: coverage_extension
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit_benefitbalance_0_financial
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit_careteam
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit_diagnosis
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit_extension
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit_item_0_adjudication
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit_item_0_extension
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit_procedure
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: explanationofbenefit_supportinginfo
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: patient
+    config:
+      schema: raw_data
+      tags: bcda_demo
+
+  - name: patient_identifier
+    config:
+      schema: raw_data
+      tags: bcda_demo
