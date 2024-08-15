@@ -1,6 +1,6 @@
 name: 'bcda_demo'
 version: '1.0.0'
-
+config-version: 2
 
 profile: 'default'
 
@@ -12,10 +12,8 @@ vars:
   input_database: cms_bcda_sample
   input_schema: raw_data
 
-  bcda_patient_file_prefix: fhir_input\\patient_
-  bcda_coverage_file_prefix: fhir_input\\coverage_
-
-  claims_enabled: true
+  bcda_patient_file_prefix: fhir_input\\\\patient_
+  bcda_coverage_file_prefix: fhir_input\\\\coverage_
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -29,3 +27,32 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 
+
+seeds:
+  bcda_demo:
+    coverage_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','coverage.csv',headers=true) }}"
+    coverage_extension_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','coverage_extension.csv',headers=true) }}"
+    explanationofbenefit_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation.csv',headers=true) }}"
+    explanationofbenefit_benefitbalance_0_financial_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation_benefitBalance.0.financial.csv',headers=true) }}"
+    explanationofbenefit_careteam_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation_careTeam.csv',headers=true) }}"
+    explanationofbenefit_diagnosis_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation_diagnosis.csv',headers=true) }}"
+    explanationofbenefit_extension_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation_extension.csv',headers=true) }}"
+    explanationofbenefit_item_0_adjudication_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation_item.0.adjudication.csv',headers=true) }}"
+    explanationofbenefit_item_0_extension_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation_item.0.extension.csv',headers=true) }}"
+    explanationofbenefit_procedure_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation_procedure.csv',headers=true) }}"
+    explanationofbenefit_supportinginfo_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','explanation_supportingInfo.csv',headers=true) }}"
+    patient_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','patient.csv',headers=true) }}"
+    patient_identifier_seed:
+      +post-hook: "{{ the_tuva_project.load_seed('tuva-public-resources/bcda_synthetic_large_advanced/august_2024','patient_identifier.csv',headers=true) }}"

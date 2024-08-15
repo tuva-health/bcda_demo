@@ -8,7 +8,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: coverage_extension
     description: FHIR inferno output table name
@@ -17,7 +17,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit
     description: FHIR inferno output table name
@@ -26,7 +26,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit_benefitbalance_0_financial
     description: FHIR inferno output table name
@@ -35,7 +35,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit_careteam
     description: FHIR inferno output table name
@@ -44,7 +44,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit_diagnosis
     description: FHIR inferno output table name
@@ -53,7 +53,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit_extension
     description: FHIR inferno output table name
@@ -62,7 +62,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit_item_0_adjudication
     description: FHIR inferno output table name
@@ -71,7 +71,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit_item_0_extension
     description: FHIR inferno output table name
@@ -80,7 +80,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit_procedure
     description: FHIR inferno output table name
@@ -89,7 +89,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: explanationofbenefit_supportinginfo
     description: FHIR inferno output table name
@@ -98,7 +98,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: patient
     description: FHIR inferno output table name
@@ -107,7 +107,7 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
 
   - name: patient_identifier
     description: FHIR inferno output table name
@@ -116,4 +116,4 @@ models:
         {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
         {% else %}_input_layer{%- endif -%}
       tags: bcda
-      materialized: table
+      materialized: view
