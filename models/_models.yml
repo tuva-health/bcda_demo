@@ -5,8 +5,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -14,8 +14,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -23,8 +23,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -32,8 +32,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -41,8 +41,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -50,8 +50,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -59,8 +59,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -68,8 +68,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -77,8 +77,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -86,8 +86,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -95,8 +95,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -104,8 +104,8 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view
 
@@ -113,7 +113,7 @@ models:
     description: FHIR inferno output table name
     config:
       schema: |
-        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_input_layer
-        {% else %}_input_layer{%- endif -%}
+        {%- if var('tuva_schema_prefix',None) != None -%}_{{var('tuva_schema_prefix')}}_raw_data
+        {% else %}raw_data{%- endif -%}
       tags: bcda
       materialized: view

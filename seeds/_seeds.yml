@@ -3,7 +3,7 @@ version: 2
 seeds:
   - name: coverage_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         id: |
@@ -55,7 +55,7 @@ seeds:
 
   - name: coverage_extension_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         coverage_id: |
@@ -77,7 +77,7 @@ seeds:
 
   - name: explanationofbenefit_benefitbalance_0_financial_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         eob_id: |
@@ -101,7 +101,7 @@ seeds:
 
   - name: explanationofbenefit_careteam_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         eob_id: |
@@ -129,7 +129,7 @@ seeds:
 
   - name: explanationofbenefit_diagnosis_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         eob_id: |
@@ -161,7 +161,7 @@ seeds:
 
   - name: explanationofbenefit_extension_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         eob_id: |
@@ -189,7 +189,7 @@ seeds:
 
   - name: explanationofbenefit_item_0_extension_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         eob_id: |
@@ -217,7 +217,7 @@ seeds:
 
   - name: explanationofbenefit_item_0_adjudication_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         eob_id: |
@@ -251,7 +251,7 @@ seeds:
 
   - name: explanationofbenefit_procedure_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         eob_id: |
@@ -279,7 +279,7 @@ seeds:
 
   - name: explanationofbenefit_supportinginfo_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         eob_id: |
@@ -325,7 +325,7 @@ seeds:
 
   - name: explanationofbenefit_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         id: |
@@ -584,7 +584,7 @@ seeds:
 
   - name: patient_identifier_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         patient_id: |
@@ -614,7 +614,7 @@ seeds:
 
   - name: patient_seed
     config:
-      schema: _raw_data
+      schema: raw_data
       tags: bcda_demo
       column_types:
         id: |
