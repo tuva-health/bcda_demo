@@ -9,7 +9,7 @@ vars:
 
   use_synthetic_data: true
 
-  input_database: cms_bcda_sample
+  input_database: bcda_synthetic
   input_schema: raw_data
 
   bcda_patient_file_prefix: fhir_input\\\\patient_
