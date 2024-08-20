@@ -2,7 +2,7 @@ name: 'bcda_demo'
 version: '1.0.0'
 config-version: 2
 
-profile: 'default'
+profile: default
 
 
 vars:
@@ -12,8 +12,9 @@ vars:
   input_database: bcda_synthetic
   input_schema: raw_data
 
-  bcda_patient_file_prefix: fhir_input\\\\patient_
   bcda_coverage_file_prefix: fhir_input\\\\coverage_
+
+  claims_enabled: true
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -22,7 +23,7 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-clean-targets:         # directories to be removed by `dbt clean`
+clean-targets:
   - "target"
   - "dbt_packages"
 
