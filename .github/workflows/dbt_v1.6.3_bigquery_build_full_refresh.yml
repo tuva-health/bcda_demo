@@ -2,7 +2,9 @@ name: dbt_v1.6.3_bigquery_build_full_refresh
 
 on:
   workflow_dispatch:
-
+  pull_request:
+    branches:
+      - main
 
 env:
   DBT_BIGQUERY_TOKEN: ${{ secrets.TUVA_BIGQUERY_TOKEN }}
@@ -19,17 +21,17 @@ jobs:
       - name: dbt-deps
         uses: mwhitaker/dbt-action@v1.6.3
         with:
-          dbt_command: "dbt deps --profiles-dir .integration_tests/profiles/bigquery"
+          dbt_command: "dbt deps --profiles-dir ./integration_tests/profiles/bigquery"
 
       - name: dbt-debug
         uses: mwhitaker/dbt-action@v1.6.3
         with:
-          dbt_command: "dbt debug --profiles-dir .integration_tests/profiles/bigquery"
+          dbt_command: "dbt debug --profiles-dir ./integration_tests/profiles/bigquery"
 
       - name: dbt-build
         uses: mwhitaker/dbt-action@v1.6.3
         with:
-          dbt_command: 'dbt build --full-refresh --profiles-dir .integration_tests/profiles/bigquery --vars {"input_database":"bcda_synthetic","input_schema":"input_layer"}'
+          dbt_command: 'dbt build --full-refresh --profiles-dir ./integration_tests/profiles/bigquery --vars {"input_database":"bcda_synthetic","input_schema":"input_layer"}'
 
       - name: Get the result
         if: ${{ always() }}

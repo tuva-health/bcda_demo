@@ -1,7 +1,9 @@
 name: dbt_v1.6.3_snowflake_build_full_claims
 on:
   workflow_dispatch:
-
+  pull_request:
+    branches:
+      - main
 
 env:
   DBT_TUVA_SNOWFLAKE_ACCOUNT: ${{ secrets.DBT_TUVA_SNOWFLAKE_ACCOUNT }}
@@ -22,17 +24,17 @@ jobs:
       - name: dbt-deps
         uses: mwhitaker/dbt-action@v1.6.3
         with:
-          dbt_command: "dbt deps --profiles-dir .integration_tests/profiles/snowflake"
+          dbt_command: "dbt deps --profiles-dir ./integration_tests/profiles/snowflake"
 
       - name: dbt-debug
         uses: mwhitaker/dbt-action@v1.6.3
         with:
-          dbt_command: "dbt debug --profiles-dir .integration_tests/profiles/snowflake"
+          dbt_command: "dbt debug --profiles-dir ./integration_tests/profiles/snowflake"
 
       - name: dbt-build
         uses: mwhitaker/dbt-action@v1.6.3
         with:
-          dbt_command: 'dbt build --full-refresh --profiles-dir .integration_tests/profiles/snowflake --vars {"input_database":"bcda_synthetic","input_schema":"input_layer"}'
+          dbt_command: 'dbt build --full-refresh --profiles-dir ./integration_tests/profiles/snowflake --vars {"input_database":"bcda_synthetic","input_schema":"input_layer"}'
 
       - name: Get the result
         if: ${{ always() }}
