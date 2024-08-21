@@ -2,7 +2,9 @@ name: dbt_v1.6.3_redshift_build_full_claims
 
 on:
   workflow_dispatch:
-
+  pull_request:
+    branches:
+      - main
 
 
 env:
